@@ -1,0 +1,24 @@
+.stick {
+    background-color: gray;
+    width: 1em;
+    height: 70vh;
+    border-radius: 1em;
+    position: fixed; /* Change to fixed */
+    right: 63em;
+  }
+  
+  .stickM {
+    background-color: #FBAF05;
+    width: 3em;
+    height: 10vh;
+    border-radius: 1em;
+    position: fixed; /* Change to fixed */
+    left: 38.5em;
+  }
+  
+  .ProductBox {
+    display: grid;
+    grid-template-columns: 95% 5%;
+    padding-left: 1em; /* Add padding to the left to accommodate the fixed position of stickM */
+  }
+  

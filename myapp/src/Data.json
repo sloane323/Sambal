@@ -1,0 +1,174 @@
+[
+  {
+    "id": "SB001",
+    "name": "Sambal Belacan",
+    "origin": "Malaysia",
+    "CALORIES": "45 kcal",
+    "SPICY": 8,
+    "SERVINGS": "10 servings",
+    "ingredients": [
+      "Red chilies",
+      "Belacan (shrimp paste)",
+      "Garlic",
+      "Lime juice"
+    ],
+    "flavor": "A pungent and savory sambal with a strong umami taste.",
+    "description": "Sambal Belacan is a classic Malaysian chili sauce known for its intense flavor. Made with a blend of red chilies, belacan (shrimp paste), garlic, and lime juice, it adds a bold umami kick to various dishes.",
+    "image": "https://www.primarasa.co.id/images/images/Sambal%20Bajak%20artikel%281%29.jpg"
+  },
+  {
+    "id": "SB002",
+    "name": "Sambal Tumis",
+    "origin": "Malaysia",
+    "CALORIES": "40 kcal",
+    "SPICY": 6,
+    "SERVINGS": "12 servings",
+    "ingredients": [
+      "Dried chilies",
+      "Shallots",
+      "Garlic",
+      "Tamarind paste",
+      "Anchovies"
+    ],
+    "flavor": "Sweet and tangy, often used as a base for many Malaysian dishes.",
+    "description": "Sambal Tumis is a versatile Malaysian chili sauce with a sweet and tangy flavor. Made with dried chilies, shallots, garlic, tamarind paste, and anchovies, it serves as a flavorful base for various Malaysian dishes.",
+    "image": "https://photo2.foodgawker.com/wp-content/uploads/2020/12/3677589.jpg"
+  },
+  {
+    "id": "SB003",
+    "name": "Sambal Kicap",
+    "origin": "Malaysia",
+    "CALORIES": "55 kcal",
+    "SPICY": 5,
+    "SERVINGS": "8 servings",
+    "ingredients": [
+      "Chilies",
+      "Soy sauce",
+      "Tamarind paste",
+      "Sugar"
+    ],
+    "flavor": "A sweet and slightly spicy sambal with the rich flavor of soy sauce.",
+    "description": "Sambal Kicap is a Malaysian chili sauce known for its sweet and slightly spicy taste. Made with chilies, soy sauce, tamarind paste, and sugar, it offers a delightful balance of flavors with the richness of soy sauce.",
+    "image": "https://moccaapedia.com/wp-content/uploads/2023/07/3.-Ini-Loh-Resep-Sambal-Bajak-Asli-Khas-Jawa-Timur.png"
+  },
+  {
+    "id": "SB004",
+    "name": "Sambal Hijau",
+    "origin": "Malaysia",
+    "CALORIES": "35 kcal",
+    "SPICY": 4,
+    "SERVINGS": "15 servings",
+    "ingredients": [
+      "Green chilies",
+      "Cilantro",
+      "Garlic",
+      "Lime juice"
+    ],
+    "flavor": "Fresh and vibrant, with a citrusy kick from lime juice.",
+    "description": "Sambal Hijau is a refreshing Malaysian chili sauce with a fresh and vibrant flavor. Made with green chilies, cilantro, garlic, and lime juice, it adds a citrusy kick to enhance the taste of various dishes.",
+    "image": "https://www.finnafood.com/blog/wp-content/uploads/2022/08/Perbedaan-Sambal-Bajak-dan-Sambal-Terasi.jpg"
+  },
+  {
+    "id": "SB005",
+    "name": "Sambal Cencalok",
+    "origin": "Malaysia",
+    "CALORIES": "50 kcal",
+    "SPICY": 7,
+    "SERVINGS": "10 servings",
+    "ingredients": [
+      "Chilies",
+      "Cencalok (fermented small shrimps)",
+      "Shallots",
+      "Lime juice"
+    ],
+    "flavor": "Unique and briny due to the fermented shrimp, adds depth to dishes.",
+    "description": "Sambal Cencalok is a distinctive Malaysian chili sauce with a unique and briny flavor. Made with chilies, cencalok (fermented small shrimps), shallots, and lime juice, it adds depth to dishes with its fermented shrimp goodness.",
+    "image": "https://img-global.cpcdn.com/recipes/0331320a3ecca4de/680x482cq70/sambal-bajak-foto-resep-utama.jpg"
+  },
+  {
+    "id": "SB006",
+    "name": "Sambal Tempoyak",
+    "origin": "Malaysia",
+    "CALORIES": "60 kcal",
+    "SPICY": 9,
+    "SERVINGS": "8 servings",
+    "ingredients": [
+      "Durian paste",
+      "Chilies",
+      "Anchovies",
+      "Lime leaves"
+    ],
+    "flavor": "Creamy and pungent, the addition of durian gives it a distinct taste.",
+    "description": "Sambal Tempoyak is a Malaysian chili sauce with a creamy and pungent flavor. Made with durian paste, chilies, anchovies, and lime leaves, it stands out with the unique addition of durian, offering a distinct and rich taste.",
+    "image": "https://img.inews.co.id/media/1200/files/inews_new/2020/10/29/Resep_Sambal_Bajak.jpg"
+  },
+  {
+    "id": "SB007",
+    "name": "Sambal Udang Kering",
+    "origin": "Malaysia",
+    "CALORIES": "55 kcal",
+    "SPICY": 8,
+    "SERVINGS": "10 servings",
+    "ingredients": [
+      "Dried shrimp",
+      "Dried chilies",
+      "Shallots",
+      "Tamarind paste"
+    ],
+    "flavor": "Intensely savory and spicy, a common condiment in Malaysian cuisine.",
+    "description": "Sambal Udang Kering is an intensely savory and spicy Malaysian chili sauce. Made with dried shrimp, dried chilies, shallots, and tamarind paste, it is a common condiment in Malaysian cuisine, adding bold flavors to various dishes.",
+    "image": "https://asset.kompas.com/crops/i8XPicsLEUrsaUTQpb62FK7kU_g=/0x0:1000x667/750x500/data/photo/2020/08/24/5f431f6307111.jpg"
+  },
+  {
+    "id": "SB008",
+    "name": "Sambal Nenas",
+    "origin": "Malaysia",
+    "CALORIES": "40 kcal",
+    "SPICY": 5,
+    "SERVINGS": "12 servings",
+    "ingredients": [
+      "Pineapple",
+      "Chilies",
+      "Shallots",
+      "Tamarind paste"
+    ],
+    "flavor": "Sweet and tangy, the pineapple adds a refreshing twist.",
+    "description": "Sambal Nenas is a Malaysian chili sauce with a sweet and tangy flavor. Made with pineapple, chilies, shallots, and tamarind paste, it offers a refreshing twist with the addition of pineapple, enhancing the overall taste.",
+    "image": "https://img.freepik.com/premium-photo/sambal-bawang-spicy-onion-sauce-with-ingredients-onion-red-chilies-garlic-salt_514255-1683.jpg"
+  },
+  {
+    "id": "SB009",
+    "name": "Sambal Jeruk",
+    "origin": "Malaysia",
+    "CALORIES": "35 kcal",
+    "SPICY": 6,
+    "SERVINGS": "15 servings",
+    "ingredients": [
+      "Chilies",
+      "Calamansi lime",
+      "Sugar",
+      "Salt"
+    ],
+    "flavor": "Zesty and citrusy, often served as a dipping sauce.",
+    "description": "Sambal Jeruk is a zesty and citrusy Malaysian chili sauce. Made with chilies, calamansi lime, sugar, and salt, it is often served as a dipping sauce to add a burst of citrusy flavor to various dishes.",
+    "image": "https://assets.ayobandung.com/crop/0x0:0x0/750x500/webp/photo/2023/07/17/Sambal-Bajak-Banten-1200765648.jpg"
+  },
+  {
+    "id": "SB010",
+    "name": "Sambal Matah",
+    "origin": "Malaysia",
+    "CALORIES": "30 kcal",
+    "SPICY": 4,
+    "SERVINGS": "18 servings",
+    "ingredients": [
+      "Shallots",
+      "Lemongrass",
+      "Garlic",
+      "Lime leaves",
+      "Bird's eye chilies"
+    ],
+    "flavor": "Fresh and aromatic, commonly used in Indonesian and Malaysian cuisines.",
+    "description": "Sambal Matah is a fresh and aromatic Malaysian chili sauce. Made with shallots, lemongrass, garlic, lime leaves, and bird's eye chilies, it is commonly used in Indonesian and Malaysian cuisines to add a burst of freshness to various dishes.",
+    "image": "https://3.bp.blogspot.com/-s2rlUmUy8GY/WZAZw-Y2cHI/AAAAAAAATbA/9ePwJgENZJ0MMCa-MTQpAzmlec2_NFTEwCLcBGAs/s1600/Sambal%2BPete.jpg"
+  }
+]
