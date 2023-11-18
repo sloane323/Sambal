@@ -1,27 +1,37 @@
 .All {
-    padding: 2em;
+    padding: 0.5em;
     background-color: #EDECEC;
 
-    width: 20em;
-    height: 20em;
+    width: 15em;
+    height: 15em;
 
-    border-radius:4em;
-    margin: 2em;
+    border-radius:2em;
+    margin-bottom: 0.5em;
+    cursor: pointer;
+  transition: box-shadow 0.3s ease; /* 그림자 트랜지션 추가 */
 
 }
+.ProductBox {
+position: relative; 
+padding-left: -100em; 
+}
 
+.All:hover {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* 마우스 오버시 그림자 추가 */
+}
 
 .starwarp {
     transition: background-color 0.3s ease-in-out;
 
     background-color: #FBAF05;
-    width: 3em;
-    height: 3em;
+    width: 2em;
+    height: 2em;
     border-radius: 50%;
 
     display: flex;
     justify-content: center; /* 수평 가운데 정렬 */
     align-items: center; /* 수직 가운데 정렬 */
+    margin: 1em;
 }
 
 .clickedStarwarp {
@@ -29,14 +39,14 @@
   }
   
 .imgbox {
-    width: 14em;
-    height: 14em;
+    width: 11em;
+    height: 11em;
     border-radius: 50%;
     background-color: aqua;
     display: flex;
     position: relative
-    ;    right: -50px;
-    top:-20px;
+    ;    right: -35px;
+    top:-3.5em;
     background-size: auto 100%; /* 배경 이미지의 너비는 자동으로, 높이는 100%로 조절 */
     background-position: center; /* 배경 이미지를 가운데 정렬 */
     background-repeat: no-repeat; /* 배경 이미지 반복 없음 */
@@ -45,41 +55,27 @@
 .All h2 {
     display: flex;
     position: relative ;
-    top:-20px;
+    top:-2.5em;
     left: 20px;
 }
+
+.titlename {
+  text-align: center; /* 텍스트 중앙 정렬 */
+  position: relative;
+  top: -2em;
+}
+
 
 .detailbox {
     display: flex;
     position: relative ;
-    bottom:22%;
-    left: 88%;
+    top:-16em;
+    left: 82%;
 
 }
-/* Product.module.css */
 
-
-  .modalAll{
-    width: 100%;
-    height: 100%;
-    position: relative;
-    margin: 0;
-    font-size: 0px;
-    top: -1em;
-    left: -1em;
-  }
-  .btnwrap {
-    position: absolute;
-    top: 2em;
-    margin: 2em;
-  }
-
-  .modalText {
-    display: flex;
-    position: relative;
-  }
-
-  .modalAll > img {
-    height: auto;
-    width: 100%;
-  }
+.showdetail{
+  position: relative ; 
+    top: -3em;
+  right:-1em;
+}

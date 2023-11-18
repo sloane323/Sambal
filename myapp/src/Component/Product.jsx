@@ -1,11 +1,9 @@
 // Product.jsx
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Star from "./Star.svg";
 import StarO from "./StarO.svg";
 import style from "./Product.module.css";
-import detail from "./ShowDetail.svg";
 import Modal from 'react-modal';
-import { CSSTransition } from 'react-transition-group';
 
 const modalStyle = {
   content: {
@@ -13,16 +11,25 @@ const modalStyle = {
     height: '100vh',
     top: 0,
     left: 0,
-    padding:0,
+    padding: 0,
   },
 };
 
-export default function Product({ sambalInfo }) {
+const Product = ({ sambalInfo, updateShopDisplay }) => {
   const [isClicked, setIsClicked] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
+  useEffect(() => {
+    const storedStars = JSON.parse(sessionStorage.getItem('clickedStars')) || {};
+    setIsClicked(storedStars[sambalInfo.id] || false);
+  }, [sambalInfo.id]);
+
   const handleStarClick = () => {
+    const updatedStars = JSON.parse(sessionStorage.getItem('clickedStars')) || {};
+    updatedStars[sambalInfo.id] = !isClicked;
+    sessionStorage.setItem('clickedStars', JSON.stringify(updatedStars));
     setIsClicked(!isClicked);
+    updateShopDisplay();
   };
 
   const handleModalOpen = () => {
@@ -35,55 +42,39 @@ export default function Product({ sambalInfo }) {
 
   return (
     <div className={style.All}>
-      <div className={`${style.starwarp} ${isClicked ? style.clickedStarwarp : ''}`} onClick={handleStarClick}>
-        {isClicked ? (
-          <img src={StarO} alt="StarO" />
-        ) : (
-          <img src={Star} alt="Star" />
-        )}
-      </div>
-      <div className={style.imgbox} style={{ backgroundImage: `url(${sambalInfo.image})` }}></div>
-      <h2>{sambalInfo.name}</h2>
-      <div className={style.detailbox} onClick={handleModalOpen}>
-        <img src={detail} alt="Star" />
+      <div>
+        {/* Clickable star */}
+        <div className={`${style.starwarp} ${isClicked ? style.clickedStarwarp : ''}`} onClick={handleStarClick}>
+          {isClicked ? (
+            <img src={StarO} alt="StarO" />
+          ) : (
+            <img src={Star} alt="Star" />
+          )}
+        </div>
+
+        {/* Clickable product box */}
+        <div className={style.conbox} onClick={handleModalOpen}>
+          <div className={style.imgbox} style={{ backgroundImage: `url(${sambalInfo.image})` }}></div>
+          <div className={style.titlename}>{sambalInfo.name}</div>
+        </div>
       </div>
 
-      {/* 모달 */}
-      <CSSTransition
-        in={isModalOpen}
-        timeout={300}
-        classNames="modal"
-        unmountOnExit
+      {/* Modal */}
+      <Modal
+        isOpen={isModalOpen}
+        onRequestClose={handleModalClose}
+        style={modalStyle}
+        contentLabel="Product Details Modal"
       >
-        <Modal
-          isOpen={isModalOpen}
-          onRequestClose={handleModalClose}
-          style={modalStyle}
-          contentLabel="Product Detail Modal"
-        >
-        <div className={style.modalAll}>
-        <div className={style.btnwrap} ><button onClick={handleModalClose}>Close</button> </div> 
-  
-        <img
-    src={sambalInfo.image}
-    alt={sambalInfo.name}
-    style={{
-      maxWidth: '100%', // 이미지의 최대 너비
-      maxHeight: '100%', // 이미지의 최대 높이
-      width: 'auto', // 자동으로 너비 조절
-      height: 'auto', // 자동으로 높이 조절
-    }}
-  />
-          <div className={style.modalText}> 
-            <h2>{sambalInfo.name}</h2> 
-            <span> {sambalInfo.description} </span>
-            <div>  {sambalInfo.SERVINGS} </div>
-          </div>
-         
-
-          </div> 
-        </Modal>
-      </CSSTransition>
+        <div>
+          <h2>{sambalInfo.name} Details</h2>
+          <div>Other details about the product can go here...</div>
+          {/* Add more details as needed */}
+          <button onClick={handleModalClose}>Close</button>
+        </div>
+      </Modal>
     </div>
   );
 }
+
+export default Product;

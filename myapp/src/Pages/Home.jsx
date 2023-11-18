@@ -1,40 +1,60 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Product from '../Component/Product';
 import sambalData from '../Data.json';
 import style from './Home.module.css';
+import Backin from "./Backin.svg";
+import Modal from 'react-modal';
+
+// Set the app element for React Modal
+Modal.setAppElement('#root');
 
 export default function Home() {
   const sambalInfo = sambalData[0]; // Change the index as needed
-  const stickMRef = useRef(null);
+  const homeRef = useRef(null);
+  const textRef = useRef(null);
+
+  const handleScroll = () => {
+    if (homeRef.current && textRef.current) {
+      const scrollPercentage = (homeRef.current.scrollTop / (homeRef.current.scrollHeight - homeRef.current.clientHeight)) * 100;
+      console.log('Home component height:', homeRef.current.clientHeight);
+      console.log('Text element height:', textRef.current.clientHeight);
+      console.log('Scroll percentage:', scrollPercentage.toFixed(2) + '%');
+    }
+  };
 
   useEffect(() => {
     const handleScroll = () => {
-      const stickM = stickMRef.current;
-
-      if (stickM) {
-        const scrollPercentage = (window.scrollY || window.pageYOffset) / (document.body.scrollHeight - window.innerHeight);
-
-        // Calculate the position of stickM based on scroll percentage
-        const stickMTop = scrollPercentage * (window.innerHeight - stickM.clientHeight);
-
-        // Update stickM position
-        stickM.style.top = `${stickMTop}px`;
+      if (homeRef.current && textRef.current) {
+        const scrollPercentage = (homeRef.current.scrollTop / (homeRef.current.scrollHeight - homeRef.current.clientHeight)) * 100;
+        console.log('Home component height:', homeRef.current.clientHeight);
+        console.log('Text element height:', textRef.current.clientHeight);
+        console.log('Scroll percentage:', scrollPercentage.toFixed(2) + '%');
       }
     };
-
-    // Attach scroll event listener
-    window.addEventListener('scroll', handleScroll);
-
-    // Cleanup the event listener on component unmount
+  
+    if (homeRef.current) {
+      homeRef.current.addEventListener('scroll', handleScroll);
+    }
+  
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      if (homeRef.current) {
+        homeRef.current.removeEventListener('scroll', handleScroll);
+      }
     };
-  }, []);
+  }, [homeRef, textRef]);
+
 
   return (
-    <div className="App">
-      <h1>Pick Your Sambal</h1>
-      <p>Indonesian Chile Paste</p>
+    <div className="App" ref={homeRef}>
+      <div className={style.title}>
+        <img src={Backin} alt="Backin" />
+        <div className={style.text}>
+          <h1>Pick Your Sambal</h1>
+          <div ref={textRef}>Indonesian Chile Paste</div>
+        </div>
+
+      </div>
+
       <div className={style.ProductBox}>
         <div>
           {sambalData.map((sambalInfo) => (
@@ -42,8 +62,13 @@ export default function Home() {
           ))}
         </div>
 
-        <div className={style.stickM} ref={stickMRef}></div>
+        <div>
+          <div className={style.stick}></div>
+          <div className={style.stickM}></div>
+        </div>
       </div>
+
+
     </div>
   );
 }
