@@ -6,24 +6,24 @@
 }
 
   .sidemain h2 {
-    margin: 50px 35px; /* 상하로 5px 간격 추가 */
+    margin: 50px 12px; /* 상하로 5px 간격 추가 */
     cursor: pointer;
     writing-mode: vertical-lr; /* 세로 방향 텍스트 모드 설정 (IE 지원) */
     transform: rotate(180deg); /* 90도 시계 방향 회전 */
   }
   .roundor {
-    width: 5em;
-    height: 5em;
+    width:3em;
+    height: 3em;
     border-radius: 50%;
     background-color: #FBAF05;
     position: relative;
-    left: 3.5em;
+    left: 1.5em;
     top: 20%;
   }
   
   .roundwh {
-    width: 2em;
-    height: 2em;
+    width: 1em;
+    height: 1em;
     border-radius: 50%;
     background-color: white;
     position: absolute;
@@ -37,7 +37,7 @@
     display: flex;
     position: relative;
     top: 2em;
-    left: 2.5em;
+    left: 0.8em;
   }
 
  

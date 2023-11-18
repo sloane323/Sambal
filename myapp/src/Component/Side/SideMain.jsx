@@ -23,7 +23,7 @@ export default function SideMain({ onTabClick }) {
         <div
           className={style.roundor}
           style={{
-            top: activeTab === 'home' ? '8em' : activeTab === 'shop' ? '15em' : '23em',
+            top: activeTab === 'home' ? '7em' : activeTab === 'shop' ? '14em' : '23em',
             transition: 'top 0.3s ease-in-out' // 부드러운 움직임을 위한 transition 속성 추가
           }}
         >
