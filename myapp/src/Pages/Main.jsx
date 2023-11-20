@@ -1,12 +1,19 @@
-// Main.js
 import React from 'react';
+import { Outlet, useNavigate } from 'react-router-dom'; // Import Outlet and useNavigate
 import Home from './Home';
 import Shop from './Shop';
 import Contact from './Contact';
 
 export default function Main({ selectedTab }) {
-  let content;
+  const navigate = useNavigate(); // Get the navigate function
 
+  // Function to navigate to the selected tab
+  const handleNavigation = (tab) => {
+    navigate(tab);
+  };
+
+  // Render the selected content based on the tab
+  let content;
   switch (selectedTab) {
     case 'home':
       content = <Home />;
@@ -23,7 +30,11 @@ export default function Main({ selectedTab }) {
 
   return (
     <div className="MainpWrap">
-      {content}
+      <div>
+        {/* Render the selected content */}
+        {content}
+      </div>
+      <Outlet /> {/* Render nested routes */}
     </div>
   );
 }

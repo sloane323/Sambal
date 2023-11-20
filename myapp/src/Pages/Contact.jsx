@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import style from "./Contact.module.css";
+import Backin from "./Backin.svg";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -34,7 +35,7 @@ export default function Contact() {
   const handleSendEmailClick = () => {
     // Basic email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
+  
     if (!formData.email || !emailRegex.test(formData.email)) {
       setValidationErrors({
         ...validationErrors,
@@ -42,16 +43,35 @@ export default function Contact() {
       });
       return;
     }
-
-    // You can customize the email body and subject
-    const subject = 'Message from your website';
-    const body = `Name: ${formData.name}\nPhone: ${formData.phone}\nMessage: ${formData.message}`;
-    window.location.href = `mailto:${formData.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  
+    // Simulate sending email (replace this with actual email sending logic)
+    // For now, just show an alert
+    alert("Email Sent!");
+  
+    // Clear the form data after sending the email
+    setFormData({
+      name: '',
+      phone: '',
+      email: '',
+      message: '',
+    });
+  
+    // You can also clear the validation errors if needed
+    setValidationErrors({});
   };
+  
 
   return (
     <div className="App">
-      <h1>Make Order From Us</h1>
+ <div className={style.title}>
+        <img src={Backin} alt="Backin" />
+        <div className={style.text}>
+          <h1>Get in Touch Contact Us</h1>
+          <div>
+        Wholesale Inquiry and Customer Center</div>
+        </div>
+    <br />
+      </div>
       
       <div className={style.whatsapp}> 
         <h3>WhatsApp</h3>
@@ -59,8 +79,8 @@ export default function Contact() {
         <button onClick={handleWhatsAppClick}>Chat Now</button>
       </div>
 
-      <div className={style.email}> 
-        <h3>Get in touch</h3>
+     <div className={style.email}> 
+     <h3>  Get in touch </h3>
         <form>
           <input type="text" name="name" placeholder="Name" value={formData.name} onChange={handleInputChange} /> <br />
           <input type="tel" name="phone" placeholder="Phone" value={formData.phone} onChange={handleInputChange} /> <br />
@@ -71,14 +91,6 @@ export default function Contact() {
         </form>
       </div>
 
-      <div> 
-        {/* Placeholder for icons */}
-        <span>Icon 1</span>
-        <span>Icon 2</span>
-        <span>Icon 3</span>
-        <span>Icon 4</span>
-        <span>Icon 5</span>
-      </div>
     </div>
   );
 }

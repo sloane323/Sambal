@@ -1,37 +1,45 @@
-// SideMain.js
-import React, { useState } from 'react';
-import style from "./SideMain.module.css"
-import MenuSvg from './menu.svg'; // SVG 파일을 불러옴
+import React from 'react';
+import style from "./SideMain.module.css";
+import MenuSvg from './menu.svg';
 
-export default function SideMain({ onTabClick }) {
-  const [activeTab, setActiveTab] = useState('home');
-
-  const handleTabClick = (tab) => {
-    onTabClick(tab);
-    setActiveTab(tab);
-  };
-
+export default function SideMain({ activeTab, onTabClick }) {
   return (
     <div>
       <div className={style.sidemain}>
-
-        <div className={style.roundwhwrap} > 
-        <img src={MenuSvg} alt="Menu" /> {/* SVG 이미지를 렌더링 */}
+        <div className={style.roundwhwrap}>
+          <img src={MenuSvg} alt="Menu" />
         </div>
-
 
         <div
           className={style.roundor}
           style={{
             top: activeTab === 'home' ? '7em' : activeTab === 'shop' ? '14em' : '23em',
-            transition: 'top 0.3s ease-in-out' // 부드러운 움직임을 위한 transition 속성 추가
+            transition: 'top 0.3s ease-in-out'
           }}
         >
           <div className={style.roundwh}></div>
         </div>
-        <h2 onClick={() => handleTabClick('home')}>HOME</h2>
-        <h2 onClick={() => handleTabClick('shop')}>SHOP</h2>
-        <h2 onClick={() => handleTabClick('contact')}>CONTACT</h2>
+
+        <h2
+          className={activeTab === 'home' ? style.active : ''}
+          onClick={() => onTabClick('home')}
+        >
+          HOME
+        </h2>
+
+        <h2
+          className={activeTab === 'shop' ? style.active : ''}
+          onClick={() => onTabClick('shop')}
+        >
+          SHOP
+        </h2>
+
+        <h2
+          className={activeTab === 'contact' ? style.active : ''}
+          onClick={() => onTabClick('contact')}
+        >
+          CONTACT
+        </h2>
       </div>
     </div>
   );

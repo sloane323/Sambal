@@ -46,12 +46,13 @@ padding-left: -100em;
     display: flex;
     position: relative
     ;    right: -35px;
-    top:-3.5em;
+    top:-1em;
     background-size: auto 100%; /* 배경 이미지의 너비는 자동으로, 높이는 100%로 조절 */
     background-position: center; /* 배경 이미지를 가운데 정렬 */
     background-repeat: no-repeat; /* 배경 이미지 반복 없음 */
 
 }
+
 .All h2 {
     display: flex;
     position: relative ;
@@ -62,7 +63,7 @@ padding-left: -100em;
 .titlename {
   text-align: center; /* 텍스트 중앙 정렬 */
   position: relative;
-  top: -2em;
+  top: -0.2em;
 }
 
 
@@ -78,4 +79,19 @@ padding-left: -100em;
   position: relative ; 
     top: -3em;
   right:-1em;
+}
+
+.modalAll {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.imgbox2 {
+  width: 100%; /* Make sure the image takes the full width of its container */
+  height: 200px; /* Set a fixed height or adjust as needed */
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 20px; /* Adjust margin as needed */
 }

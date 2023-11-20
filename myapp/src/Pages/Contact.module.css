@@ -3,6 +3,9 @@
     border-radius: 2em;
     padding:2em;
     margin: 1em;
+    width: 9em;
+    height: 9em;
+    text-align: center;
 }
 .whatsapp > button {
     margin-top: 2em;
@@ -13,8 +16,46 @@
     background-color: #F0F0F0;
     padding:2em;
     margin: 1em;
+    width: 9em;
+    text-align: center;
 }
 
 .form > button {
     margin-top: 5em;
 }
+.title {
+    position: relative;
+    top:0;
+    left:0em;
+    width: 80%;
+  }
+
+  .text{
+    display: flex;
+  }
+
+  .text >img{
+    display: flex;
+    position: relative;
+    top:10em;
+  }
+  .text>h1 {
+    position: relative;
+    top: -1.5em;
+  }
+
+  .text>div {
+    display: flex;
+    position: absolute;
+    top:6em;
+    left: 0;
+  }
+
+  .whatsapp input,
+.email input,
+.email textarea {
+  background: none;
+  border: none;
+  outline: none;
+}
+
