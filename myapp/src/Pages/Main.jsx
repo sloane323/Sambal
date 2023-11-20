@@ -32,9 +32,10 @@ export default function Main({ selectedTab }) {
     <div className="MainpWrap">
       <div>
         {/* Render the selected content */}
+        <Outlet />
         {content}
       </div>
-      <Outlet /> {/* Render nested routes */}
+       {/* Render nested routes */}
     </div>
   );
 }

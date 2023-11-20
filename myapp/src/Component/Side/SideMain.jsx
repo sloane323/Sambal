@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'; // Add this import statement
 import style from "./SideMain.module.css";
 import MenuSvg from './menu.svg';
 
@@ -20,26 +21,33 @@ export default function SideMain({ activeTab, onTabClick }) {
           <div className={style.roundwh}></div>
         </div>
 
-        <h2
-          className={activeTab === 'home' ? style.active : ''}
-          onClick={() => onTabClick('home')}
-        >
-          HOME
-        </h2>
+        <Link to="/"> {/* Specify the route path */}
+          <h2
+            className={activeTab === 'home' ? style.active : ''}
+            onClick={() => onTabClick('home')}
+          >
+            HOME
+          </h2>
+        </Link>
 
-        <h2
-          className={activeTab === 'shop' ? style.active : ''}
-          onClick={() => onTabClick('shop')}
-        >
-          SHOP
-        </h2>
+        <Link to="/shop"> {/* Specify the route path */}
+          <h2
+            className={activeTab === 'shop' ? style.active : ''}
+            onClick={() => onTabClick('shop')}
+          >
+            SHOP
+          </h2>
+        </Link>
 
-        <h2
-          className={activeTab === 'contact' ? style.active : ''}
-          onClick={() => onTabClick('contact')}
-        >
-          CONTACT
-        </h2>
+        <Link to="/contact"> {/* Specify the route path */}
+          <h2
+            className={activeTab === 'contact' ? style.active : ''}
+            onClick={() => onTabClick('contact')}
+          >
+            CONTACT
+          </h2>
+        </Link>
+        
       </div>
     </div>
   );

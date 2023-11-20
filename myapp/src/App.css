@@ -10,6 +10,7 @@ body, html {
   min-height: 100%; /* Ensure the App container takes at least the full height of the viewport */
   display: flex;
   flex-direction: column;
+  margin: 2em;
 }
 
 .cover {

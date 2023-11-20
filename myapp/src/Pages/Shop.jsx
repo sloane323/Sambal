@@ -20,6 +20,7 @@ const Shop = () => {
   };
 
   return (
+    <div>
     <div className={style.title}>
         <img src={Backin} alt="Backin" />
         <div className={style.text}>
@@ -34,7 +35,7 @@ const Shop = () => {
         <Product key={product.id} sambalInfo={product} updateShopDisplay={updateShopDisplay} />
       ))} 
        
-    </div>    </div>
+    </div>    </div> </div> 
   );
 };
 
